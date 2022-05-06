@@ -9,3 +9,7 @@
 In this org you can find all our open source projects.
 
 Feel free to contribute! 😉
+
+## We are hiring!
+
+For more information see our [job opportunities](https://www.trustedshops.com/job-opportunities).
