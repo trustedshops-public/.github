@@ -2,7 +2,7 @@
   <img width="500" src="/banner.svg">
 </p>
 
->  It's all about trust
+>  It's all about ~trust~ OpenSource
 
 ## We want to build Trust using Open Source.
 
