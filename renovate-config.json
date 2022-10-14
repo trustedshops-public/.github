@@ -1,0 +1,148 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "dependencyDashboard": true,
+  "pre-commit": {
+    "enabled": true
+  },
+  "semantic-commits": "enabled",
+  "extends": [
+    "config:base",
+    "github>whitesource/merge-confidence:beta",
+    "group:recommended"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "addLabels": [
+        "major"
+      ]
+    },
+    {
+      "matchManagers": [
+        "terraform",
+        "terraform-version"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "addLabels": [
+        "major"
+      ],
+      "semanticCommitType": "fix"
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor"
+      ],
+      "groupName": "npm"
+    },
+    {
+      "matchManagers": [
+        "gradle",
+        "maven",
+        "gradle-wrapper"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor"
+      ],
+      "groupName": "java"
+    },
+    {
+      "matchManagers": [
+        "docker-compose",
+        "dockerfile"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor"
+      ],
+      "groupName": "docker"
+    },
+    {
+      "matchManagers": [
+        "circleci"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor"
+      ],
+      "groupName": "circleci"
+    },
+    {
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor",
+        "pre-commit"
+      ],
+      "groupName": "pre-commit",
+      "schedule": [
+        "on monday before 8am"
+      ],
+      "commitMessageSuffix": " [skip ci]",
+      "automerge": true,
+      "ignoreTests": true
+    }
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/__fixtures__/**"
+  ]
+}
+
