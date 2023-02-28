@@ -12,6 +12,22 @@
     "github>whitesource/merge-confidence:beta",
     "group:recommended"
   ],
+  "enabledManagers": [
+        "ansible-galaxy",
+        "circleci",
+        "docker-compose",
+        "dockerfile",
+        "gomod",
+        "homebrew",
+        "nodenv",
+        "npm",
+        "nvm",
+        "pre-commit",
+        "regex",
+        "terraform-version",
+        "terraform",
+        "pip_requirements"
+    ],
   "labels": [
     "renovate"
   ],
