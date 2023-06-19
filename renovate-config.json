@@ -152,7 +152,23 @@
       "commitMessageSuffix": " [skip ci]",
       "automerge": true,
       "ignoreTests": true
-    }
+    },
+    {
+            "matchManagers": [
+                "circleci"
+            ],
+            "matchUpdateTypes": [
+                "patch",
+                "pin"
+            ],
+            "addLabels": [
+                "patch",
+                "circleci"
+            ],
+            "groupName": "circleci (patch)",
+            "automerge": true,
+            "automergeType": "branch"
+        }
   ],
   "ignorePaths": [
     "**/node_modules/**",
