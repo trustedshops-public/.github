@@ -13,25 +13,47 @@
     "group:recommended"
   ],
   "enabledManagers": [
-        "ansible-galaxy",
-        "circleci",
-        "docker-compose",
-        "dockerfile",
-        "gomod",
-        "homebrew",
-        "nodenv",
-        "npm",
-        "nvm",
-        "pre-commit",
-        "regex",
-        "terraform-version",
-        "terraform",
-        "pip_requirements"
-    ],
+    "ansible-galaxy",
+    "circleci",
+    "docker-compose",
+    "dockerfile",
+    "gomod",
+    "homebrew",
+    "nodenv",
+    "npm",
+    "nvm",
+    "pre-commit",
+    "regex",
+    "terraform-version",
+    "terraform",
+    "pip_requirements"
+  ],
   "labels": [
     "renovate"
   ],
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  },
   "packageRules": [
+    {
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor"
+      ],
+      "groupName": "minor go packages",
+      "semanticCommitType": "fix"
+    },
     {
       "matchUpdateTypes": [
         "major"
@@ -154,21 +176,21 @@
       "ignoreTests": true
     },
     {
-            "matchManagers": [
-                "circleci"
-            ],
-            "matchUpdateTypes": [
-                "patch",
-                "pin"
-            ],
-            "addLabels": [
-                "patch",
-                "circleci"
-            ],
-            "groupName": "circleci (patch)",
-            "automerge": true,
-            "automergeType": "branch"
-        }
+      "matchManagers": [
+        "circleci"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin"
+      ],
+      "addLabels": [
+        "patch",
+        "circleci"
+      ],
+      "groupName": "circleci (patch)",
+      "automerge": true,
+      "automergeType": "branch"
+    }
   ],
   "ignorePaths": [
     "**/node_modules/**",
@@ -177,4 +199,3 @@
     "**/__fixtures__/**"
   ]
 }
-
