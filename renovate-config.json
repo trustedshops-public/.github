@@ -55,6 +55,29 @@
       "semanticCommitType": "fix"
     },
     {
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
+      "addLabels": [
+        "minor-test"
+      ],
+      "matchFileNames": [
+        "tests/**",
+        "test/**"
+      ],
+      "groupName": "minor go test packages",
+      "semanticCommitType": "test"
+    },
+    {
       "matchUpdateTypes": [
         "major"
       ],
@@ -190,15 +213,6 @@
       "groupName": "circleci (patch)",
       "automerge": true,
       "automergeType": "branch"
-    },
-    {
-      "matchFileNames": [
-        "tests/**",
-        "test/**"
-      ],
-      "extends": [
-        ":semanticCommitTypeAll(test)"
-      ]
     }
   ],
   "ignorePaths": [
