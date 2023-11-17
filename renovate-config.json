@@ -71,8 +71,8 @@
         "minor-test"
       ],
       "matchFileNames": [
-        "tests/**",
-        "test/**"
+        "**/tests/**",
+        "**/test/**"
       ],
       "groupName": "minor go test packages",
       "semanticCommitType": "test"
