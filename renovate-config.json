@@ -220,5 +220,8 @@
     "**/bower_components/**",
     "**/vendor/**",
     "**/__fixtures__/**"
+  ],
+  "schedule": [
+    "on monday before 8am"
   ]
 }
