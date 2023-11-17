@@ -36,6 +36,15 @@
   },
   "packageRules": [
     {
+      "matchFileNames": [
+        "tests/**",
+        "test/**"
+      ],
+      "extends": [
+        ":semanticCommitTypeAll(test)"
+      ]
+    },
+    {
       "matchManagers": [
         "gomod"
       ],
