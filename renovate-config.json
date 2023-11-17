@@ -36,15 +36,6 @@
   },
   "packageRules": [
     {
-      "matchFileNames": [
-        "tests/**",
-        "test/**"
-      ],
-      "extends": [
-        ":semanticCommitTypeAll(test)"
-      ]
-    },
-    {
       "matchManagers": [
         "gomod"
       ],
@@ -199,6 +190,15 @@
       "groupName": "circleci (patch)",
       "automerge": true,
       "automergeType": "branch"
+    },
+    {
+      "matchFileNames": [
+        "tests/**",
+        "test/**"
+      ],
+      "extends": [
+        ":semanticCommitTypeAll(test)"
+      ]
     }
   ],
   "ignorePaths": [
