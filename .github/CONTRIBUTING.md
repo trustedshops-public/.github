@@ -32,7 +32,7 @@ People *love* thorough bug reports. We are not even kidding.
 
 To make your life easier there is also a handy template available so feel free to use it.
 
-> ATTENTION: If you DONT provide steps to reproduce the ticket will be closed WITHOUT FURTHER NOTICE!
+> ATTENTION: If you DON'T provide steps to reproduce the ticket will be closed WITHOUT FURTHER NOTICE!
 
 ## Licence
 By contributing, you agree that your contributions will be licensed under the project's licence.
