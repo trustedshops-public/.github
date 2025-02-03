@@ -23,7 +23,7 @@ body:
     attributes:
       label: Problem description
       description: Please provide some details about the error, e.g. what you have
-        done before it occured
+        done before it occurred
     validations:
       required: true
   - type: textarea
@@ -63,9 +63,9 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: I read and aggree to the contribution guidelines
+      label: I read and agree to the contribution guidelines
       description: |
         By submitting this issue, you read and agree to the contribution guidelines of the project
       options:
-        - label: I read and aggree to the contribution guidelines
+        - label: I read and agree to the contribution guidelines
           required: true
